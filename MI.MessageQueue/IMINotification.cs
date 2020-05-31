@@ -1,0 +1,52 @@
+﻿using JetBrains.Annotations;
+using System;
+using System.Collections.Generic;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+
+namespace MI.MessageQueue
+{
+    public interface IMINotification
+    {
+        #region SendNotification
+        void SendNotification(string notificationKey, object data);
+
+        void SendNotification(string notificationKey, string exchangeName, object data);
+
+        void SendNotification(string notificationKey, object data, MessagePriority priority);
+
+        void SendNotification(string notificationKey, object data, int delay);
+
+        void SendNotification(string notificationKey, object data, MessagePriority priority, int delay);
+
+        void SendNotification([NotNull] IEnumerable<ValueTuple<string, object>> messages);
+        #endregion
+
+
+        #region SendNotificationAsync
+        /// <summary>单条发送消息</summary>
+        /// <param name="notificationKey">通知Key</param>
+        /// <param name="data">内容</param>
+        Task SendNotificationAsync([NotNull]string notificationKey, object data, CancellationToken cancellationToken = default);
+        /// <summary>单条发送消息</summary>
+        /// <param name="notificationKey">通知Key</param>
+        /// <param name="data">内容</param>
+        /// <param name="delay">延迟毫秒数</param>
+        Task SendNotificationAsync([NotNull]string notificationKey, object data, int delay, CancellationToken cancellationToken = default);
+        /// <summary>单条发送消息</summary>
+        /// <param name="notificationKey">通知Key</param>
+        /// <param name="data">内容</param>
+        /// <param name="priority">优先级</param>
+        Task SendNotificationAsync([NotNull]string notificationKey, object data, MessagePriority priority, CancellationToken cancellationToken = default);
+        /// <summary>单条发送消息</summary>
+        /// <param name="notificationKey">通知Key</param>
+        /// <param name="data">内容</param>
+        /// <param name="priority">优先级</param>
+        /// <param name="delay">延迟毫秒数</param>
+        Task SendNotificationAsync([NotNull]string notificationKey, object data, MessagePriority priority, int delay, CancellationToken cancellationToken = default);
+        /// <summary>批量发送消息</summary>
+        Task SendNotificationAsync([NotNull]IEnumerable<ValueTuple<string, object>> messages, CancellationToken cancellationToken = default);
+        #endregion
+    }
+}
