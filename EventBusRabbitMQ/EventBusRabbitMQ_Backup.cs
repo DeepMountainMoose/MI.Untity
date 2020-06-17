@@ -170,20 +170,11 @@ namespace EventBusRabbitMQ
                         if (response.Result != null && response.Result.ApiUrlList.Any())
                         {
                             subscriptions = response.Result.ApiUrlList;
-                            Task.Run(() =>
-                            {
-                                StackRedis.Current.SetLists(routingKey, response.Result.ApiUrlList);
-                            });
-
+                            await StackRedis.Current.SetLists(routingKey, response.Result.ApiUrlList);
                         }
                     }
                     foreach (var apiUrl in subscriptions)
                     {
-                        Task.Run(() =>
-                        {
-                            _logger.LogInformation(message);
-                        });
-
                         await _apiHelperService.PostAsync(apiUrl, message);
                         _logger.LogInformation($"MQ执行ProcessEvent方法完成，RoutingKey:{routingKey} Message:{message}");
                     }
