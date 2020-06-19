@@ -1,7 +1,6 @@
 ﻿using MI.Component.Core;
+using MI.Component.Core.Exceptions;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MI.EF.Core
 {

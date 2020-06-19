@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace MI.Component.Core
+namespace MI.Component.Core.Exceptions
 {
     public abstract class MIException : Exception
     {

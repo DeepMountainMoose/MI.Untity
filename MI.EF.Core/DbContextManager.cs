@@ -5,6 +5,7 @@ using System.Text;
 namespace MI.EF.Core
 {
     public class DbContextManager<TDbContext> : IDbContextManager<TDbContext>
+        where TDbContext:DbContextBase
     {
 
     }
