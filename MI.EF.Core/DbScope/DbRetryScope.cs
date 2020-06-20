@@ -1,8 +1,7 @@
 ﻿using MI.Component.Core.Exceptions;
-using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Data.SqlClient;
 using System.Threading;
 using System.Threading.Tasks;
 

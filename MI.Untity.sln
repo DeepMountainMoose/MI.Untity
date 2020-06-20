@@ -27,9 +27,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.MessageQueue.Test", "MI.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFCore", "EFCore", "{3BD40D3F-2D01-46C6-8960-4EB358B6D290}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.EF.Core", "MI.EF.Core\MI.EF.Core.csproj", "{546F66E0-DE03-4A1E-A41D-E743C43395F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.EF.Core", "MI.EF.Core\MI.EF.Core.csproj", "{546F66E0-DE03-4A1E-A41D-E743C43395F9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Component.Core", "MI.Component.Core\MI.Component.Core.csproj", "{49D92374-10D4-4A61-B773-C76BA2AE9570}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Component.Core", "MI.Component.Core\MI.Component.Core.csproj", "{49D92374-10D4-4A61-B773-C76BA2AE9570}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.EF.Core.WebTest", "MI.EF.Core.WebTest\MI.EF.Core.WebTest.csproj", "{A40E17FF-12C0-43B7-B56D-EF2D8BFA1DB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{49D92374-10D4-4A61-B773-C76BA2AE9570}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49D92374-10D4-4A61-B773-C76BA2AE9570}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49D92374-10D4-4A61-B773-C76BA2AE9570}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A40E17FF-12C0-43B7-B56D-EF2D8BFA1DB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A40E17FF-12C0-43B7-B56D-EF2D8BFA1DB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A40E17FF-12C0-43B7-B56D-EF2D8BFA1DB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A40E17FF-12C0-43B7-B56D-EF2D8BFA1DB2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

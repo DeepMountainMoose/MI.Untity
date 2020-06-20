@@ -1,10 +1,10 @@
 ﻿using MI.Component.Core.Exceptions;
 using MI.EF.Core.BulkInsert;
-using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Data.Common;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -272,7 +272,7 @@ namespace MI.EF.Core
                                     lstParameter.Add(para);
                                 }
                             }
-                            executedCommand += await db.Database.ExecuteSqlRawAsync(lstCommand[i], lstParameter.ToArray());
+                            executedCommand += await db.Database.ExecuteSqlCommandAsync(lstCommand[i], lstParameter.ToArray());
                         }
                         await db.SaveChangesAsync();
                         tran.Commit();
@@ -291,7 +291,7 @@ namespace MI.EF.Core
                             lstParameter.Add(para);
                         }
                     }
-                    executedCommand = await db.Database.ExecuteSqlRawAsync(lstCommand[0], lstParameter.ToArray());
+                    executedCommand = await db.Database.ExecuteSqlCommandAsync(lstCommand[0], lstParameter.ToArray());
                 }
             });
 

@@ -23,6 +23,11 @@ namespace MI.EF.Core
             this.nameOrConnectionString = nameOrConnectionString;
         }
 
+        public DbContextBase(DbContextOptions options)
+        {
+
+        }
+
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             var context = ObjectContextFactory.Get();

@@ -30,7 +30,6 @@ namespace MI.EF.Core
             DbContextPreloadManager.Preload<TDbContext>(connectionString);
         }
 
-
         public DbContextManager(string connectionString,string readOnlyConnectionString)
             :this(connectionString,readOnlyConnectionString,new DbRetryScope())
         { }

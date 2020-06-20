@@ -9,9 +9,9 @@ namespace MI.EF.Core.DbFunctions
     {
         public static void AddFunctions(this ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<SplitStringItem>().HasNoKey();
-            modelBuilder.Entity<SplitStringIntItem>().HasNoKey();
-            modelBuilder.Entity<SplitStringLongItem>().HasNoKey();
+            modelBuilder.Query<SplitStringItem>();
+            modelBuilder.Query<SplitStringIntItem>();
+            modelBuilder.Query<SplitStringLongItem>();
         }
     }
 }
