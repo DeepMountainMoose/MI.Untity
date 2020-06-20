@@ -33,9 +33,13 @@ namespace MI.EF.Core.WebTest.Controllers
             //return result;
 
 
-            var result = await env.Db.QueryAsync<SlideShowImg>(a=>a.PKID>0);
+            var result = await env.Db.SingleQueryAsync<SlideShowImg>(a => a.PKID == 3);
 
-            return result;
+            //await env.Db.UpdateAsync<SlideShowImg>(result, a => { a.PushHome = false; });
+
+            await env.Db.UpdateAsync(3, new UpdateProperty<SlideShowImg, bool>(a => a.PushHome, true));
+
+            return await env.Db.QueryAsync<SlideShowImg>(a => true); ;
         }
 
         // GET api/values/5
