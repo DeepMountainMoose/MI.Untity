@@ -10,5 +10,9 @@ namespace MI.EF.Core.DbScope
         void Execute(Action action);
 
         Task ExecuteAsync(Func<Task> action);
+
+        TResult Execute<TResult>(Func<TResult> func);
+
+        Task<TResult> ExecuteAsync<TResult>(Func<Task<TResult>> func);
     }
 }

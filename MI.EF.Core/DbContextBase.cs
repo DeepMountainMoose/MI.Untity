@@ -1,4 +1,5 @@
-﻿using MI.EF.Core.Interception;
+﻿using MI.EF.Core.DbFunctions;
+using MI.EF.Core.Interception;
 using MI.EF.Core.OnConfiguring;
 using Microsoft.EntityFrameworkCore;
 using System.Diagnostics;
@@ -27,6 +28,13 @@ namespace MI.EF.Core
             var context = ObjectContextFactory.Get();
             optionsBuilder = context.GetOptionsBuilder(optionsBuilder, nameOrConnectionString);
             base.OnConfiguring(optionsBuilder);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.AddFunctions();
         }
     }
 }
