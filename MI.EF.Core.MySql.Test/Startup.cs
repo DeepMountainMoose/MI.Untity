@@ -20,8 +20,6 @@ namespace MI.EF.Core.MySql.Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContextPool<MIContext>(options => options.UseMySql(Configuration.GetConnectionString("SqlConnection")));
-
             services.AddSingleton(EnvironmentHandler.Build(Configuration));
             EFCoreRegister.Use<MySqlConnectionFactory>(); //MySQL
             //EFCoreRegister.Use<SqlServerEFCore>(); //SQL Server
