@@ -1,18 +1,12 @@
-﻿1. 项目直接Nuget引用MI.EF.Core
-2. 项目里新建xxContext上下文  继承DBContextBase 内容如下：
+﻿using MI.EF.Core.Env;
+using Microsoft.Extensions.Configuration;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Threading.Tasks;
 
-    public partial class MIContext : DbContextBase
-    {
-        public MIContext(string nameOrConnectionString)
-            : base(nameOrConnectionString)
-        {
-
-        }
-    }
-
-
-3. 项目新建EnvironmentHandler类文件
-
+namespace MI.EF.Core.MySql.Test
+{
     public class EnvironmentHandler : EnvironmentHandlerBase<MIContext>, IEnvironmentHandler<MIContext>
     {
         private static IEnvironmentHandler<MIContext> env = null;
@@ -51,33 +45,3 @@
         //protected override string ApplicationName => "MI.Untity";
     }
 }
-
-4.Startup类修改
-
-如果是SQL Server 则配置代码如下：
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddSingleton(EnvironmentHandler.Build(Configuration));
-    EFCoreRegister.Use<SqlServerEFCore>();
-    services.AddMvc();
-}
-
-如果是MySQL，则配置代码如下：
-public void ConfigureServices(IServiceCollection services)
-{
-    services.AddSingleton(EnvironmentHandler.Build(Configuration));
-    EFCoreRegister.Use<MySqlConnectionFactory>();
-    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-}
-
-
-5. 然后在需要用的地方使用如下代码：
-
- private readonly IEnvironmentHandler<MIContext> env;
- private readonly IServiceProvider serviceProvider;
-
- public ValuesController(IServiceProvider serviceProvider)
- {
-     this.serviceProvider = serviceProvider;
-     this.env = serviceProvider.GetRequiredService<IEnvironmentHandler<MIContext>>();
- }

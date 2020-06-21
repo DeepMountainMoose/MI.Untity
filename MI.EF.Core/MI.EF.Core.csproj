@@ -4,6 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyVersion>1.0.0.1</AssemblyVersion>
     <Version>1.0.0.1</Version>
+    <PackageReleaseNotes>SqlServer  EF Core 
+使用时 在Startup.cs的 ConfigureServices方法中添加  
+EFCoreRegister.Use&lt;SqlServerEFCore&gt;();</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>

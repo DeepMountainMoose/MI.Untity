@@ -1,19 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using MI.EF.Core.Env;
+﻿using MI.Component.EF.MySql.Core;
 using MI.EF.Core.OnConfiguring;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
-namespace MI.EF.Core.WebTest
+namespace MI.EF.Core.MySql.Test
 {
     public class Startup
     {
@@ -27,11 +20,12 @@ namespace MI.EF.Core.WebTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //services.AddDbContextPool<MIContext>(options => options.UseSqlServer(Configuration.GetConnectionString("SqlConnection")));
+            //services.AddDbContextPool<MIContext>(options => options.UseMySql(Configuration.GetConnectionString("SqlConnection")));
+
             services.AddSingleton(EnvironmentHandler.Build(Configuration));
-            EFCoreRegister.Use<SqlServerEFCore>(); //SQL Server
-            //EFCoreRegister.Use<MySqlConnectionFactory>(); //MySQL
-            services.AddMvc();
+            EFCoreRegister.Use<MySqlConnectionFactory>(); //MySQL
+            //EFCoreRegister.Use<SqlServerEFCore>(); //SQL Server
+            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

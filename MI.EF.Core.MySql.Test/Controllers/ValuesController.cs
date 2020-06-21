@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace MI.EF.Core.WebTest.Controllers
+namespace MI.EF.Core.MySql.Test.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,20 +22,18 @@ namespace MI.EF.Core.WebTest.Controllers
             this.env = serviceProvider.GetRequiredService<IEnvironmentHandler<MIContext>>();
         }
 
-
         // GET api/values
         [HttpGet]
         public async Task<ActionResult<IEnumerable<SlideShowImg>>> Get()
         {
-            //var result = await _context.SlideShowImgs.ToListAsync();
-
+            //var result = await _context.SlideShowImg.ToListAsync();
             //return result;
 
-            var result = await env.Db.SingleQueryAsync<SlideShowImg>(a => a.PKID == 3);
+            var result = await env.Db.SingleQueryAsync<SlideShowImg>(a => a.Id == 1);
 
             //await env.Db.UpdateAsync<SlideShowImg>(result, a => { a.PushHome = false; });
 
-            await env.Db.UpdateAsync(3, new UpdateProperty<SlideShowImg, bool>(a => a.PushHome, true));
+            await env.Db.UpdateAsync(1, new UpdateProperty<SlideShowImg, bool>(a => a.pushHome, false));
 
             return await env.Db.QueryAsync<SlideShowImg>(a => true); ;
         }
