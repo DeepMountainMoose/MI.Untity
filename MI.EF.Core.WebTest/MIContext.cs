@@ -9,12 +9,6 @@ namespace MI.EF.Core.WebTest
 {
     public partial class MIContext : DbContextBase
     {
-        //public MIContext(DbContextOptions<MIContext> options)
-        //    : base(options)
-        //{
-
-        //}
-
         public MIContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {

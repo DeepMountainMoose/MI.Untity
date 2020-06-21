@@ -122,7 +122,8 @@ namespace MI.EF.Core
         {
             ParameterChecker.CheckNull(query, "query");
             var db = (TDbContext)Activator.CreateInstance(typeof(TDbContext), this.readOnlyConnectionString);
-            db.ChangeTracker.AutoDetectChangesEnabled = false;
+            //db.ChangeTracker.AutoDetectChangesEnabled = false;
+            db.ChangeTracker.QueryTrackingBehavior = QueryTrackingBehavior.NoTracking;
             using (db)
             {
                 return await this.dbScope.ExecuteAsync(() => query(db));

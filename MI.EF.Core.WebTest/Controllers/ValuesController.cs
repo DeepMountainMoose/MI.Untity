@@ -32,7 +32,6 @@ namespace MI.EF.Core.WebTest.Controllers
 
             //return result;
 
-
             var result = await env.Db.SingleQueryAsync<SlideShowImg>(a => a.PKID == 3);
 
             //await env.Db.UpdateAsync<SlideShowImg>(result, a => { a.PushHome = false; });
