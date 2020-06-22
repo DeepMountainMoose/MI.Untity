@@ -33,9 +33,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Component.Core", "MI.Com
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.EF.Core.WebTest", "MI.EF.Core.WebTest\MI.EF.Core.WebTest.csproj", "{A40E17FF-12C0-43B7-B56D-EF2D8BFA1DB2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Component.EF.MySql.Core", "MI.Component.EF.MySql.Core\MI.Component.EF.MySql.Core.csproj", "{FA8A1DA9-633D-45F0-B1F2-9AF416CE8F32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Component.EF.MySql.Core", "MI.Component.EF.MySql.Core\MI.Component.EF.MySql.Core.csproj", "{FA8A1DA9-633D-45F0-B1F2-9AF416CE8F32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.EF.Core.MySql.Test", "MI.EF.Core.MySql.Test\MI.EF.Core.MySql.Test.csproj", "{CF5ABCD6-5D34-48F6-914F-F01F54884D83}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.EF.Core.MySql.Test", "MI.EF.Core.MySql.Test\MI.EF.Core.MySql.Test.csproj", "{CF5ABCD6-5D34-48F6-914F-F01F54884D83}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceClient", "ServiceClient\ServiceClient.csproj", "{1FE22781-3109-46C3-897B-CA3A44C54D71}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{CF5ABCD6-5D34-48F6-914F-F01F54884D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CF5ABCD6-5D34-48F6-914F-F01F54884D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CF5ABCD6-5D34-48F6-914F-F01F54884D83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FE22781-3109-46C3-897B-CA3A44C54D71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FE22781-3109-46C3-897B-CA3A44C54D71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FE22781-3109-46C3-897B-CA3A44C54D71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FE22781-3109-46C3-897B-CA3A44C54D71}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
