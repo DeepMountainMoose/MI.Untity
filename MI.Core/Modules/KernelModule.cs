@@ -1,6 +1,9 @@
-﻿using MI.Core.Configuration.Startup;
+﻿using FeI.Dependency;
+using MI.Core.Configuration.Startup;
 using MI.Core.Dependency;
 using MI.Core.Reflection;
+using MI.Core.Runtime;
+using MI.Core.Runtime.Remoting;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -21,8 +24,8 @@ namespace MI.Core.Modules
         {
             IocManager.AddConventionalRegistrar(new BasicConventionalRegistrar());
 
-            //IocManager.RegisterType<IScopedIocResolver, ScopedIocResolver>(DependencyLifeStyle.Transient);
-            //IocManager.RegisterType(typeof(IAmbientScopeProvider<>), typeof(DataContextAmbientScopeProvider<>), DependencyLifeStyle.Transient);
+            IocManager.RegisterType<IScopedIocResolver, ScopedIocResolver>(DependencyLifeStyle.Transient);
+            IocManager.RegisterType(typeof(IAmbientScopeProvider<>), typeof(DataContextAmbientScopeProvider<>), DependencyLifeStyle.Transient);
 
             //Configuration.UnitOfWork.RegisterFilter(DataFilters.SoftDelete, true);
 

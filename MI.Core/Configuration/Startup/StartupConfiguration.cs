@@ -65,22 +65,22 @@ namespace MI.Core.Configuration.Startup
             ServiceReplaceActions[type] = replaceAction;
         }
 
-        //public T Get<T>()
-        //{
-        //    return GetOrCreate(typeof(T).FullName, () => IocManager.Resolve<T>());
-        //}
+        public T Get<T>()
+        {
+            return GetOrCreate(typeof(T).FullName, () => IocManager.Resolve<T>());
+        }
 
-        //public void Initialize()
-        //{
-        //    UnitOfWork = IocManager.Resolve<IUnitOfWorkDefaultOptions>();
-        //    Caching = IocManager.Resolve<ICachingConfiguration>();
-        //    EventBus = IocManager.Resolve<IEventBusConfiguration>();
-        //    Modules = IocManager.Resolve<IModuleConfigurations>();
-        //    Auditing = IocManager.Resolve<IAuditingConfiguration>();
-        //    BackgroundJobs = IocManager.Resolve<IBackgroundJobConfiguration>();
-        //    Authorization = IocManager.Resolve<IAuthorizationConfiguration>();
+        public void Initialize()
+        {
+            //UnitOfWork = IocManager.Resolve<IUnitOfWorkDefaultOptions>();
+            //Caching = IocManager.Resolve<ICachingConfiguration>();
+            //EventBus = IocManager.Resolve<IEventBusConfiguration>();
+            //Modules = IocManager.Resolve<IModuleConfigurations>();
+            //Auditing = IocManager.Resolve<IAuditingConfiguration>();
+            //BackgroundJobs = IocManager.Resolve<IBackgroundJobConfiguration>();
+            //Authorization = IocManager.Resolve<IAuthorizationConfiguration>();
 
-        //    ServiceReplaceActions = new Dictionary<Type, Action>();
-        //}
+            ServiceReplaceActions = new Dictionary<Type, Action>();
+        }
     }
 }

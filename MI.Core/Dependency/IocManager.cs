@@ -32,6 +32,12 @@ namespace MI.Core.Dependency
         /// </summary>
         private bool _isDisposed;
 
+        /// <summary>
+        ///     默认的依赖注入管理器实例
+        /// </summary>
+        [Obsolete("已过期，应该使用通常依赖注入的方式使用")]
+        public static IocManager Instance { get; private set; }
+
         ///// <summary>
         /////     默认的依赖注入管理器实例
         ///// </summary>
@@ -79,10 +85,10 @@ namespace MI.Core.Dependency
 
         #region [ Ctor ]
 
-        //static IocManager()
-        //{
-        //    Instance = new IocManager();
-        //}
+        static IocManager()
+        {
+            Instance = new IocManager();
+        }
 
         /// <summary>
         ///     初始化一个 <see cref="IocManager" />
@@ -94,8 +100,7 @@ namespace MI.Core.Dependency
             _conventionalRegistrars = new List<IConventionalDependencyRegistrar>();
 
             IocContainer.Register(
-                Component.For<IocManager, IIocManager, IIocRegistrar, IIocResolver>().Instance(this)
-            );
+                Component.For<IocManager, IIocManager, IIocRegistrar, IIocResolver>().Instance(this));
         }
 
         #endregion
