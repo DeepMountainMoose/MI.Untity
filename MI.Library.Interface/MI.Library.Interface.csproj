@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MI.Common\MI.Common.csproj" />
+    <ProjectReference Include="..\MI.Core\MI.Core.csproj" />
+    <ProjectReference Include="..\ServiceClient\ServiceClient.csproj" />
+  </ItemGroup>
+
+</Project>

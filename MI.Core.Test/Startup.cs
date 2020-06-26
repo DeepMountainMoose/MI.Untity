@@ -22,18 +22,8 @@ namespace MI.Core.Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-            return services.AddEhi<SampleApplicationModule>();
-
-            //services.AddTransient<ITestService, TestService>();
-
+            return services.AddEhi<SampleApplicationModule>(Common.Platform.TestApi,Library.Interface.StartupModeType.Api);
         }
-
-        //// This method gets called by the runtime. Use this method to add services to the container.
-        //public void ConfigureServices(IServiceCollection services)
-        //{
-        //    services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
-        //}
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

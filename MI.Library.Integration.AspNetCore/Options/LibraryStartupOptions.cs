@@ -1,4 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 
 namespace MI.Library.Integration.AspNetCore.Options
@@ -20,24 +23,24 @@ namespace MI.Library.Integration.AspNetCore.Options
         /// </summary>
         public Action<MvcOptions> MvcOptionsAction { get; set; }
 
-        ///// <summary>
-        /////     Apollo配置
-        ///// </summary>
-        //public Action<IServiceCollection, IConfiguration> ApolloConfigureAction { get; set; }
+        /// <summary>
+        ///     Apollo配置
+        /// </summary>
+        public Action<IServiceCollection, IConfiguration> ApolloConfigureAction { get; set; }
 
-        ///// <summary>
-        /////     Swagger配置
-        ///// </summary>
-        //public Action<SwaggerGenOptions> SwaggerGenOptionsAction { get; set; }
+        /// <summary>
+        ///     Swagger配置
+        /// </summary>
+        public Action<SwaggerGenOptions> SwaggerGenOptionsAction { get; set; }
 
-        ///// <summary>
-        /////     ServiceClient配置
-        ///// </summary>
-        //public Action<ServiceClientOptions> ServiceClientOptionsAction { get; set; }
+        /// <summary>
+        ///     ServiceClient配置
+        /// </summary>
+        public Action<ServiceClientOptions> ServiceClientOptionsAction { get; set; }
 
-        ///// <summary>
-        /////     健康检查配置
-        ///// </summary>
-        //public Action<IHealthChecksBuilder> HealthChecksBuilderAction { get; set; }
+        /// <summary>
+        ///     健康检查配置
+        /// </summary>
+        public Action<IHealthChecksBuilder> HealthChecksBuilderAction { get; set; }
     }
 }
