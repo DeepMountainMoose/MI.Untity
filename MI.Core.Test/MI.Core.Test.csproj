@@ -13,7 +13,6 @@
   <ItemGroup>
     <ProjectReference Include="..\MI.Core\MI.Core.csproj" />
     <ProjectReference Include="..\MI.Library.Integration.AspNetCore\MI.Library.Integration.AspNetCore.csproj" />
-    <ProjectReference Include="..\MI.Web\MI.Web.csproj" />
   </ItemGroup>
 
 </Project>

@@ -19,5 +19,17 @@ namespace MI.Library
                 public const string Iv = "a1rg35Dew47f4ffk";
             }
         }
+
+        public static class Authorization
+        {
+            public static class Scheme
+            {
+                public const string Past = "OldEhiJwtBearer";
+
+                public const string Current = "EhiJwtBearer";
+            }
+
+            public const string CookieName = "ehi_l_a";
+        }
     }
 }
