@@ -37,6 +37,7 @@ namespace MI.Library.Integration.AspNetCore.Middleware
             if (IsAuthenticated(request))
                 return _next(context);
 
+
             //权限登录页面
             //context.Response.Redirect($"{ApplicationUrls.AdminLoginUrl}Account/Login?returnUrl={request.GetDisplayUrl()}");
             return Task.CompletedTask;
