@@ -5,7 +5,7 @@ using System.Text;
 
 namespace MI.Core.Configuration.Startup
 {
-    internal class StartupConfiguration : DictionayBasedConfig, IStartupConfiguration
+    public class StartupConfiguration : DictionayBasedConfig, IStartupConfiguration
     {
         /// <summary>
         ///     Ctor.

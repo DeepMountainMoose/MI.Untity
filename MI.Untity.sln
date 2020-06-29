@@ -57,7 +57,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Library.Integration.Comm
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Library", "MI.Library\MI.Library.csproj", "{E0E77CE9-F7E1-4FD4-922B-5D62E54D8612}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.RedisCache", "MI.RedisCache\MI.RedisCache.csproj", "{CA4DDD0A-8246-4334-92B5-DD9782617690}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.RedisCache", "MI.RedisCache\MI.RedisCache.csproj", "{CA4DDD0A-8246-4334-92B5-DD9782617690}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Test", "MI.Test\MI.Test.csproj", "{DD13456A-C72A-4C27-AE83-2BA9FF67715C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -161,6 +163,10 @@ Global
 		{CA4DDD0A-8246-4334-92B5-DD9782617690}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CA4DDD0A-8246-4334-92B5-DD9782617690}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CA4DDD0A-8246-4334-92B5-DD9782617690}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DD13456A-C72A-4C27-AE83-2BA9FF67715C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DD13456A-C72A-4C27-AE83-2BA9FF67715C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DD13456A-C72A-4C27-AE83-2BA9FF67715C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DD13456A-C72A-4C27-AE83-2BA9FF67715C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
