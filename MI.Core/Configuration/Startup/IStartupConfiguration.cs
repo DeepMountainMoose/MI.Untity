@@ -1,4 +1,5 @@
 ﻿using MI.Core.Dependency;
+using MI.Core.Runtime.Caching.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -20,10 +21,10 @@ namespace MI.Core.Configuration.Startup
         ///// </summary>
         //string DefaultNameOrConnectionString { get; set; }
 
-        ///// <summary>
-        /////     缓存的配置.
-        ///// </summary>
-        //ICachingConfiguration Caching { get; }
+        /// <summary>
+        ///     缓存的配置.
+        /// </summary>
+        ICachingConfiguration Caching { get; }
 
         ///// <summary>
         /////     用于配置<see cref="IEventBus" />.
@@ -38,12 +39,13 @@ namespace MI.Core.Configuration.Startup
         ///// <summary>
         /////     默认工作单元的配置.
         ///// </summary>
+        ///// </summary>
         //IUnitOfWorkDefaultOptions UnitOfWork { get; }
 
-        ///// <summary>
-        /////     模块的配置.
-        ///// </summary>
-        //IModuleConfigurations Modules { get; }
+        /// <summary>
+        ///     模块的配置.
+        /// </summary>
+        IModuleConfigurations Modules { get; }
 
         ///// <summary>
         /////     用于配置后台任务模块.
@@ -55,11 +57,11 @@ namespace MI.Core.Configuration.Startup
         ///// </summary>
         //T Get<T>();
 
-        ///// <summary>
-        /////     用于替换一个类的实现
-        ///// </summary>
-        ///// <param name="type"></param>
-        ///// <param name="replaceAction"></param>
-        //void ReplaceService(Type type, Action replaceAction);
+        /// <summary>
+        ///     用于替换一个类的实现
+        /// </summary>
+        /// <param name="type"></param>
+        /// <param name="replaceAction"></param>
+        void ReplaceService(Type type, Action replaceAction);
     }
 }

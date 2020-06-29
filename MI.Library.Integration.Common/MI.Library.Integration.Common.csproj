@@ -7,11 +7,13 @@
   <ItemGroup>
     <PackageReference Include="Com.Ctrip.Framework.Apollo" Version="2.4.0" />
     <PackageReference Include="Com.Ctrip.Framework.Apollo.Configuration" Version="2.4.0" />
+    <PackageReference Include="Enums.NET" Version="3.0.3" />
     <PackageReference Include="Microsoft.AspNetCore.Hosting.Abstractions" Version="2.2.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\MI.Library.Interface\MI.Library.Interface.csproj" />
+    <ProjectReference Include="..\MI.RedisCache\MI.RedisCache.csproj" />
   </ItemGroup>
 
 </Project>

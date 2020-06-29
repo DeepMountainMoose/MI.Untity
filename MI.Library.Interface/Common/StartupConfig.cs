@@ -1,5 +1,6 @@
 ﻿using MI.Common;
 using MI.Core.Extensions;
+using MI.Library.Interface.Enum;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -15,6 +16,11 @@ namespace MI.Library.Interface.Common
         public static string CacheEnvironmentPrefix { get; set; }
         public static Platform CurrentPlatform { get; set; } = Platform.None;
         public static StartupModeType StartupMode { get; private set; }
+
+        /// <summary>默认的数据库配置类型</summary>
+        public static DbConfigType DefaultDbConfigType { get; internal set; } = DbConfigType.Default;
+
+        public static UseCapability UseCapability { get; set; }
 
         /// <summary>
         ///     缓存Key前缀

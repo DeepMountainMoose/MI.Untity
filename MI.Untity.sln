@@ -61,6 +61,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.RedisCache", "MI.RedisCa
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Test", "MI.Test\MI.Test.csproj", "{DD13456A-C72A-4C27-AE83-2BA9FF67715C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeI.RedisCache.ProtoBuf", "FeI.RedisCache.ProtoBuf\FeI.RedisCache.ProtoBuf.csproj", "{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -167,6 +169,10 @@ Global
 		{DD13456A-C72A-4C27-AE83-2BA9FF67715C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DD13456A-C72A-4C27-AE83-2BA9FF67715C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DD13456A-C72A-4C27-AE83-2BA9FF67715C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

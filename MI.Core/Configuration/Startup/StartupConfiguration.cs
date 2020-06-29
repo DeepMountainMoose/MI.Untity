@@ -1,4 +1,5 @@
 ﻿using MI.Core.Dependency;
+using MI.Core.Runtime.Caching.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -28,10 +29,10 @@ namespace MI.Core.Configuration.Startup
         ///// </summary>
         //public string DefaultNameOrConnectionString { get; set; }
 
-        ///// <summary>
-        /////     缓存配置
-        ///// </summary>
-        //public ICachingConfiguration Caching { get; private set; }
+        /// <summary>
+        ///     缓存配置
+        /// </summary>
+        public ICachingConfiguration Caching { get; private set; }
 
         ///// <summary>
         /////     事件总线配置
@@ -48,10 +49,10 @@ namespace MI.Core.Configuration.Startup
         ///// </summary>
         //public IUnitOfWorkDefaultOptions UnitOfWork { get; private set; }
 
-        ///// <summary>
-        /////     模块配置
-        ///// </summary>
-        //public IModuleConfigurations Modules { get; private set; }
+        /// <summary>
+        ///     模块配置
+        /// </summary>
+        public IModuleConfigurations Modules { get; private set; }
 
         ///// <summary>
         /////     用于配置后台任务模块
