@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27703.2035
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Untity", "MI.Untity\MI.Untity.csproj", "{B5403947-2331-4071-A3D7-DF0118397851}"
 EndProject
@@ -59,9 +59,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Library", "MI.Library\MI
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.RedisCache", "MI.RedisCache\MI.RedisCache.csproj", "{CA4DDD0A-8246-4334-92B5-DD9782617690}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Test", "MI.Test\MI.Test.csproj", "{DD13456A-C72A-4C27-AE83-2BA9FF67715C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Test", "MI.Test\MI.Test.csproj", "{DD13456A-C72A-4C27-AE83-2BA9FF67715C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeI.RedisCache.ProtoBuf", "FeI.RedisCache.ProtoBuf\FeI.RedisCache.ProtoBuf.csproj", "{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeI.RedisCache.ProtoBuf", "FeI.RedisCache.ProtoBuf\FeI.RedisCache.ProtoBuf.csproj", "{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Web.Api", "MI.Web.Api\MI.Web.Api.csproj", "{9A37FAF7-52AD-4944-B0F6-5F8F9E44B59B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -173,6 +175,10 @@ Global
 		{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9DEC2E8A-D4C5-4888-8636-C0C76424C4B3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A37FAF7-52AD-4944-B0F6-5F8F9E44B59B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A37FAF7-52AD-4944-B0F6-5F8F9E44B59B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A37FAF7-52AD-4944-B0F6-5F8F9E44B59B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A37FAF7-52AD-4944-B0F6-5F8F9E44B59B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

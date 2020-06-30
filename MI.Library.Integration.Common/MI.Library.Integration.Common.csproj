@@ -12,8 +12,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\FeI.RedisCache.ProtoBuf\FeI.RedisCache.ProtoBuf.csproj" />
     <ProjectReference Include="..\MI.Library.Interface\MI.Library.Interface.csproj" />
+    <ProjectReference Include="..\MI.Library\MI.Library.csproj" />
     <ProjectReference Include="..\MI.RedisCache\MI.RedisCache.csproj" />
+    <ProjectReference Include="..\MI.Web.Api\MI.Web.Api.csproj" />
   </ItemGroup>
 
 </Project>

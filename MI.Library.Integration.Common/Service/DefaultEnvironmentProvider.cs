@@ -1,11 +1,9 @@
-﻿using MI.Library.Integration.Common.Utils;
+﻿using MI.Library.EventArgs;
+using MI.Library.Integration.Common.Utils;
 using MI.Library.Interface;
 using MI.Library.Interface.Common;
 using MI.Library.Interface.Enum;
-using MI.Library.Interface.EventArgs;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MI.Library.Integration.Common.Service
 {

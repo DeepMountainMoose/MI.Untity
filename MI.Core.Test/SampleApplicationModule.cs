@@ -12,10 +12,11 @@ using System.Reflection;
 using System.Threading;
 using MI.Library.Integration.Common.Extensions;
 using FeI.RedisCache.ProtoBuf.Caching.Redis;
+using MI.RedisCache.Caching.Redis;
 
 namespace MI.Core.Test
 {
-    [DependsOn(typeof(KernelModule))]
+    [DependsOn(typeof(KernelModule),typeof(RedisCacheModule))]
     public class SampleApplicationModule : Modules.Module
     {
         /// <summary>
@@ -25,7 +26,6 @@ namespace MI.Core.Test
         {
             ConfigServiceClient();
             ThreadPool.SetMinThreads(Math.Max(50, Environment.ProcessorCount * 5), Math.Min(80, Environment.ProcessorCount * 10));
-            //Configuration.Modules.IntegrationModule().ServiceClientConfig.IsAttachData = false;
             Configuration.Modules.UseRedisCache(option => option.UseProtoBuf());
         }
 

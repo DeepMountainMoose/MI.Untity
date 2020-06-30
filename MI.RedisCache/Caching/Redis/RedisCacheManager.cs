@@ -2,9 +2,6 @@
 using MI.Core.Extensions;
 using MI.Core.Runtime.Caching;
 using MI.Core.Runtime.Caching.Configuration;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MI.RedisCache.Caching.Redis
 {

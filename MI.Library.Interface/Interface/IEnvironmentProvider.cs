@@ -1,8 +1,6 @@
-﻿using MI.Library.Interface.Enum;
-using MI.Library.Interface.EventArgs;
+﻿using MI.Library.EventArgs;
+using MI.Library.Interface.Enum;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MI.Library.Interface
 {
