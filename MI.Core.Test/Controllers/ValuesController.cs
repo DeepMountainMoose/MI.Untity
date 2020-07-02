@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using MI.Core.Runtime.Caching;
 using MI.Core.Test.Service;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,17 +13,22 @@ namespace MI.Core.Test.Controllers
     public class ValuesController : ControllerBase
     {
         private readonly ITestService _testService;
+        private readonly ICacheManager _cacheManager;
 
-        public ValuesController(ITestService testService)
+        public ValuesController(ITestService testService, ICacheManager cacheManager)
         {
             _testService = testService;
+            _cacheManager = cacheManager;
         }
 
         // GET api/values
         [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        public async Task<ActionResult<IEnumerable<string>>> Get()
         {
-            var result = _testService.GetTestResult();
+            //var result = _testService.GetTestResult();
+
+            var cache = _cacheManager.GetCache<string, string>("test");
+            var result = await cache.GetAsync("1", () => Task.FromResult("1"));
             return new string[] { result, result };
         }
 

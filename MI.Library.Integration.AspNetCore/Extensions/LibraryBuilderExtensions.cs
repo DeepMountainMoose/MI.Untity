@@ -98,12 +98,15 @@ namespace MI.Library.Integration.AspNetCore.Extensions
 
             var configurationRoot = new ConfigurationBuilder()
                 .AddApollo(EnvironmentUtils.GetApolloOptions(platForm, environmentType, isDebug))
-                .AddNamespace("EHI.Front")
+                //.AddNamespace("EHI.Front")
                 .AddDefault()
                 .Build();
 
+            //foreach (var item in configurationRoot.AsEnumerable())
+            //    configurationRoot[item.Key] = AesUtils.Descrypt(item.Value, Constants.Apollo.Aes.Key, Constants.Apollo.Aes.Iv);
+
             foreach (var item in configurationRoot.AsEnumerable())
-                configurationRoot[item.Key] = AesUtils.Descrypt(item.Value, Constants.Apollo.Aes.Key, Constants.Apollo.Aes.Iv);
+                configurationRoot[item.Key] = item.Value;
 
             builder.Services.Configure<InfrastructureOption>(configurationRoot);
             configureAction?.Invoke(builder.Services, configurationRoot);

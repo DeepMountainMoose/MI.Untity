@@ -21,7 +21,7 @@ namespace MI.Core.Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
-            return services.AddEhi<SampleApplicationModule>(Common.Platform.TestApi, Library.Interface.StartupModeType.Api);
+            return services.AddEhi<SampleApplicationModule>(Common.Platform.MI, Library.Interface.StartupModeType.Api);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

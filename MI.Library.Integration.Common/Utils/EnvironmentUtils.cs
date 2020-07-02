@@ -54,21 +54,26 @@ namespace MI.Library.Integration.Common.Utils
             return EnvironmentType.Default;
         }
 
-        public static string GetConfigUrl(string envStr)
-        {
-            return GetConfigUrl(GetEnvType(envStr));
-        }
-
         public static string GetConfigUrl(EnvironmentType environmentType)
         {
+            //switch (environmentType)
+            //{
+            //    case EnvironmentType.Product:
+            //        return "http://apolloConfigEncrypt.1hai.cn";
+            //    case EnvironmentType.Demo:
+            //        return "http://apollofat.dev.ehi.com.cn:8010";
+            //    default:
+            //        return "http://apollodev.dev.ehi.com.cn:8010";
+            //}
+
             switch (environmentType)
             {
                 case EnvironmentType.Product:
-                    return "http://apolloConfigEncrypt.1hai.cn";
+                    return "http://47.99.92.76:8080";
                 case EnvironmentType.Demo:
-                    return "http://apollofat.dev.ehi.com.cn:8010";
+                    return "http://47.99.92.76:8080";
                 default:
-                    return "http://apollodev.dev.ehi.com.cn:8010";
+                    return "http://47.99.92.76:8080";
             }
         }
     }
