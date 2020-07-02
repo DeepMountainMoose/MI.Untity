@@ -74,9 +74,9 @@ namespace MI.Core.Configuration.Startup
         public void Initialize()
         {
             //UnitOfWork = IocManager.Resolve<IUnitOfWorkDefaultOptions>();
-            //Caching = IocManager.Resolve<ICachingConfiguration>();
+            Caching = IocManager.Resolve<ICachingConfiguration>();
             //EventBus = IocManager.Resolve<IEventBusConfiguration>();
-            //Modules = IocManager.Resolve<IModuleConfigurations>();
+            Modules = IocManager.Resolve<IModuleConfigurations>();
             //Auditing = IocManager.Resolve<IAuditingConfiguration>();
             //BackgroundJobs = IocManager.Resolve<IBackgroundJobConfiguration>();
             //Authorization = IocManager.Resolve<IAuthorizationConfiguration>();

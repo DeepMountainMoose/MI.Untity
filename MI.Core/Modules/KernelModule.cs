@@ -1,8 +1,11 @@
 ﻿using FeI.Dependency;
 using MI.Core.Configuration.Startup;
 using MI.Core.Dependency;
+using MI.Core.Extensions;
 using MI.Core.Reflection;
 using MI.Core.Runtime;
+using MI.Core.Runtime.Caching;
+using MI.Core.Runtime.Caching.Memory;
 using MI.Core.Runtime.Remoting;
 using System;
 using System.Collections.Generic;
@@ -66,30 +69,30 @@ namespace MI.Core.Modules
         //    }
         //}
 
-        ///// <summary>
-        /////     如果外部没有注册某些必须Component, 则本方法将注入默认Component的默认实现
-        ///// </summary>
-        //private void RegisterMissingComponents()
-        //{
-        //    if (!IocManager.IsRegistered<IGuidGenerator>())
-        //    {
-        //        IocManager.GetContainer().Register(
-        //            Component
-        //                .For<IGuidGenerator, SequentialGuidGenerator>()
-        //                .Instance(SequentialGuidGenerator.Instance)
-        //        );
-        //    }
+        /// <summary>
+        ///     如果外部没有注册某些必须Component, 则本方法将注入默认Component的默认实现
+        /// </summary>
+        private void RegisterMissingComponents()
+        {
+            //if (!IocManager.IsRegistered<IGuidGenerator>())
+            //{
+            //    IocManager.GetContainer().Register(
+            //        Component
+            //            .For<IGuidGenerator, SequentialGuidGenerator>()
+            //            .Instance(SequentialGuidGenerator.Instance)
+            //    );
+            //}
 
-        //    IocManager.RegisterTypeIfNot<IUnitOfWork, NullUnitOfWork>(DependencyLifeStyle.Transient);
-        //    IocManager.RegisterTypeIfNot<ICacheManager, MemoryCacheManager>();
-        //    IocManager.RegisterTypeIfNot<IAuditInfoProvider, NullAuditInfoProvider>();
-        //    IocManager.RegisterTypeIfNot<IBackgroundJobManager, BackgroundJobManager>();
-        //    IocManager.RegisterTypeIfNot<IUnitOfWorkFilterExecuter, NullUnitOfWorkFilterExecuter>();
-        //    IocManager.RegisterTypeIfNot<IClockProvider, LocalClockProvider>();
-        //    IocManager.RegisterTypeIfNot<IClientInfoProvider, NullClientInfoProvider>();
-        //    IocManager.RegisterTypeIfNot<IPermissionChecker, NullPermissionChecker>();
-        //    IocManager.RegisterTypeIfNot<IBackgroundJobStore, NullBackgroundJobStore>();
-        //}
+            //IocManager.RegisterTypeIfNot<IUnitOfWork, NullUnitOfWork>(DependencyLifeStyle.Transient);
+            IocManager.RegisterTypeIfNot<ICacheManager, MemoryCacheManager>();
+            //IocManager.RegisterTypeIfNot<IAuditInfoProvider, NullAuditInfoProvider>();
+            //IocManager.RegisterTypeIfNot<IBackgroundJobManager, BackgroundJobManager>();
+            //IocManager.RegisterTypeIfNot<IUnitOfWorkFilterExecuter, NullUnitOfWorkFilterExecuter>();
+            //IocManager.RegisterTypeIfNot<IClockProvider, LocalClockProvider>();
+            //IocManager.RegisterTypeIfNot<IClientInfoProvider, NullClientInfoProvider>();
+            //IocManager.RegisterTypeIfNot<IPermissionChecker, NullPermissionChecker>();
+            //IocManager.RegisterTypeIfNot<IBackgroundJobStore, NullBackgroundJobStore>();
+        }
 
         ///// <summary>
         /////     关闭模块

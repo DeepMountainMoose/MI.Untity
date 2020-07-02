@@ -5,6 +5,7 @@ using MI.Core.Configuration.Startup;
 using MI.Core.Modules;
 using MI.Core.PlugIns;
 using MI.Core.Reflection;
+using MI.Core.Runtime.Caching.Configuration;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -17,10 +18,10 @@ namespace MI.Core.Dependency
         {
             container.Register(
                 Component.For<ITypeFinder>().ImplementedBy<TypeFinder>().LifestyleSingleton(),
-                Component.For<IStartupConfiguration, StartupConfiguration>()
-                    .ImplementedBy<StartupConfiguration>()
-                    .LifestyleSingleton(),
+                Component.For<IStartupConfiguration, StartupConfiguration>().ImplementedBy<StartupConfiguration>().LifestyleSingleton(),
                  Component.For<IModuleManager, ModuleManager>().ImplementedBy<ModuleManager>().LifestyleSingleton(),
+                 Component.For<ICachingConfiguration, CachingConfiguration>().ImplementedBy<CachingConfiguration>().LifestyleSingleton(),
+                 Component.For<IModuleConfigurations, ModuleConfigurations>().ImplementedBy<ModuleConfigurations>().LifestyleSingleton(),
                 Component.For<IAssemblyFinder, AssemblyFinder>().ImplementedBy<AssemblyFinder>().LifestyleSingleton(),
                 Component.For<IPlugInManager, PlugInManager>().ImplementedBy<PlugInManager>().LifestyleSingleton()
             );
