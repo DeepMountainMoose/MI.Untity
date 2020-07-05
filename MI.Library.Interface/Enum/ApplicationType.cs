@@ -9,6 +9,10 @@ namespace MI.Library.Interface.Enum
         /// <summary>
         ///     interfce/api
         /// </summary>
-        Interface = 1
+        Interface = 1,
+        /// <summary>
+        /// MI.Picture
+        /// </summary>
+        Picture = 2
     }
 }

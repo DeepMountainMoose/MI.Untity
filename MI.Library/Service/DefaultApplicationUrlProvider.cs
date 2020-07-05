@@ -40,7 +40,8 @@ namespace MI.Library.Service
         {
             _urlMapper = new Dictionary<int, string>
             {
-                {(int)ApplicationType.Interface,"http://interface.1hai.cn/api/" }
+                {(int)ApplicationType.Interface,"http://interface.1hai.cn/api/" },
+                {(int)ApplicationType.Picture,"http://localhost:7002/" }
             };
         }
 
@@ -48,7 +49,8 @@ namespace MI.Library.Service
         {
             _urlMapper = new Dictionary<int, string>
             {
-                {(int)ApplicationType.Interface,"http://interface.demo.ehi.com.cn/api/" }
+                {(int)ApplicationType.Interface,"http://interface.demo.ehi.com.cn/api/" },
+                {(int)ApplicationType.Picture,"http://localhost:7002/" }
             };
         }
 
@@ -56,7 +58,8 @@ namespace MI.Library.Service
         {
             _urlMapper = new Dictionary<int, string>
             {
-                {(int)ApplicationType.Interface,"http://interface.dev.ehi.com.cn/api/" }
+                {(int)ApplicationType.Interface,"http://interface.dev.ehi.com.cn/api/" },
+                {(int)ApplicationType.Picture,"http://localhost:7002/" }
         };
         }
 

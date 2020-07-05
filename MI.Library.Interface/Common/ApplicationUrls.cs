@@ -20,5 +20,11 @@ namespace MI.Library.Interface.Common
         /// <remarks>对应线上:http://interface.1hai.cn/api/ </remarks>
         /// </summary>
         public static string InterfaceUrl => Provider?.GetUrl(ApplicationType.Interface) ?? "http://interface.dev.ehi.com.cn/";
+
+        /// <summary>
+        ///     Picture后台地址
+        /// <remarks>对应线上:http://interface.1hai.cn/api/ </remarks>
+        /// </summary>
+        public static string PictureUrl => Provider?.GetUrl(ApplicationType.Picture) ?? "http://localhost:7002/";
     }
 }
