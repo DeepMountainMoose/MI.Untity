@@ -36,7 +36,6 @@ namespace MI.Core.Test.Controllers
             //依赖注入
             //var result = _testService.GetTestResult();
 
-
             //Redis缓存
             //var cache = _cacheManager.GetCache<string, string>("StockApi");
             //return await cache.GetAsync("HiCarEnjoys", () => _resilientServiceClient.RequestAsync($"{ApplicationUrls.PictureUrl}Picture/QueryPicture/Index", HttpVerb.Get));

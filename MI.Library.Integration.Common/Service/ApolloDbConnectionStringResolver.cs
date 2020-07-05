@@ -76,16 +76,6 @@ namespace MI.Library.Integration.Common.Service
 
         private void Init(EnvironmentType environmentType)
         {
-            //var builder = new ConfigurationBuilder()
-            //    .AddApollo(new ApolloOptions
-            //    {
-            //        AppId = Constants.Apollo.Database.AppId,
-            //        Env = environmentType.ToApolloEnv(),
-            //        MetaServer = EnvironmentUtils.GetConfigUrl(environmentType),
-            //        HttpMessageHandlerFactory = () => new System.Net.Http.HttpClientHandler { UseProxy = false }
-            //    }).AddNamespace(Constants.Apollo.Database.Namespace);
-            //_configuration = builder.Build();
-
             _configuration = new ConfigurationBuilder()
                 .AddApollo(new ApolloOptions
                 {
@@ -93,7 +83,7 @@ namespace MI.Library.Integration.Common.Service
                     Env = environmentType.ToApolloEnv(),
                     MetaServer = EnvironmentUtils.GetConfigUrl(environmentType),
                     HttpMessageHandlerFactory = () => new System.Net.Http.HttpClientHandler { UseProxy = false }
-                }).AddDefault().Build();
+                }).AddNamespace(Constants.Apollo.Database.Namespace).AddDefault().Build();
         }
 #endif
         #endregion
