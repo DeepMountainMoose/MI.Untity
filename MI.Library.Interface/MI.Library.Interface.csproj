@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DapperWrapper\DapperWrapper.csproj" />
     <ProjectReference Include="..\MI.Common\MI.Common.csproj" />
     <ProjectReference Include="..\MI.Core\MI.Core.csproj" />
     <ProjectReference Include="..\ServiceClient\ServiceClient.csproj" />

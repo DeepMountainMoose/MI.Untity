@@ -18,6 +18,13 @@ namespace MI.Library
 
                 public const string Iv = "a1rg35Dew47f4ffk";
             }
+
+            public static class Database
+            {
+                public const string AppId = "100000";
+
+                public const string Namespace = "MI.DBConfig";
+            }
         }
 
         public static class Authorization

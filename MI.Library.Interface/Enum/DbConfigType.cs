@@ -12,6 +12,14 @@ namespace MI.Library.Interface.Enum
         /// <summary>
         ///     默认主库
         /// </summary>
-        Default = 0
+        Default = 0,
+        /// <summary>
+        ///     默认主库
+        /// </summary>
+        Order = 1,
+        /// <summary>
+        ///     默认主库
+        /// </summary>
+        MI = 2
     }
 }

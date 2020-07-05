@@ -9,6 +9,7 @@ using MI.Library.Integration.AspNetCore.DependencyInjection;
 using MI.Library.Integration.AspNetCore.Filter.swagger;
 using MI.Library.Integration.AspNetCore.Options;
 using MI.Library.Integration.AspNetCore.Service;
+using MI.Library.Integration.Common.Service;
 using MI.Library.Integration.Common.Utils;
 using MI.Library.Interface;
 using MI.Library.Interface.Common;
@@ -217,6 +218,19 @@ namespace MI.Library.Integration.AspNetCore.Extensions
             var healthChecksBuilder = builder.Services.AddHealthChecks();
 
             builderAction?.Invoke(healthChecksBuilder);
+
+            return builder;
+        }
+
+        /// <summary>
+        ///     增加内部数据库连接提供器.
+        ///     <remarks>初始化<see cref="IDbConnectionStringResolver" /></remarks>
+        /// </summary>
+        /// <param name="builder"></param>
+        /// <returns></returns>
+        public static ILibraryBuilder AddEhiDbConnectionStringResolver(this ILibraryBuilder builder)
+        {
+            builder.Services.AddSingleton<IDbConnectionStringResolver, ApolloDbConnectionStringResolver>();
 
             return builder;
         }

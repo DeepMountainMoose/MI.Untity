@@ -73,6 +73,9 @@ namespace MI.Library.Integration.AspNetCore
             // Apollo
             builder.AddEhiApollo(libraryStartupOptions.ApolloConfigureAction);
 
+            // DbConnectionStringResolver
+            builder.AddEhiDbConnectionStringResolver();
+
             // Mvc
             builder.AddEhiMvc(libraryStartupOptions.MvcOptionsAction);
 
