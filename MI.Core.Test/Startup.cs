@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using MI.Library.Integration.AspNetCore.Extensions;
+using MI.EF.Core.OnConfiguring;
 
 namespace MI.Core.Test
 {
@@ -21,6 +22,7 @@ namespace MI.Core.Test
         // This method gets called by the runtime. Use this method to add services to the container.
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
+            EFCoreRegister.Use<SqlServerEFCore>();
             return services.AddEhi<SampleApplicationModule>(Common.Platform.MI, Library.Interface.StartupModeType.Api);
         }
 
