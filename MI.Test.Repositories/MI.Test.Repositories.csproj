@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DbContextPool\" />
+    <Folder Include="EntityFramework\" />
+    <Folder Include="Repository\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\MI.Core\MI.Core.csproj" />
+    <ProjectReference Include="..\MI.EntityFrameworkCore\MI.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+</Project>
