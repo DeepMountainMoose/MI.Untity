@@ -1,12 +1,10 @@
-﻿using Microsoft.EntityFrameworkCore;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Threading.Tasks;
+using System.Text;
 
-namespace MI.Core.Test
+namespace MI.Domain.Test
 {
     [Table("SlideShowImg")]
     public class SlideShowImg
@@ -24,10 +22,5 @@ namespace MI.Core.Test
 
         [Column("pushHome")]
         public bool PushHome { get; set; }
-    }
-
-    public partial class MIContext
-    {
-        public virtual DbSet<SlideShowImg> SlideShowImg { get; set; }
     }
 }

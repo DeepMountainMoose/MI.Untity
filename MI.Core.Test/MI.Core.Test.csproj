@@ -13,9 +13,11 @@
   <ItemGroup>
     <ProjectReference Include="..\FeI.RedisCache.ProtoBuf\FeI.RedisCache.ProtoBuf.csproj" />
     <ProjectReference Include="..\MI.Core\MI.Core.csproj" />
+    <ProjectReference Include="..\MI.Domain.Test\MI.Domain.Test.csproj" />
     <ProjectReference Include="..\MI.EF.Core\MI.EF.Core.csproj" />
     <ProjectReference Include="..\MI.Library.Integration.AspNetCore\MI.Library.Integration.AspNetCore.csproj" />
     <ProjectReference Include="..\MI.Library.Integration.Common\MI.Library.Integration.Common.csproj" />
+    <ProjectReference Include="..\MI.Test.Repositories\MI.Test.Repositories.csproj" />
     <ProjectReference Include="..\ServiceClient\ServiceClient.csproj" />
   </ItemGroup>
 

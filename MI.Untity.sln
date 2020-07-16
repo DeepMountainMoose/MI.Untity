@@ -71,11 +71,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DapperWrapper", "DapperWrap
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "EFCore2", "EFCore2", "{0BDA6132-311D-4C36-987B-B5D2AFB6AAB3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Test.Repositories", "MI.Test.Repositories\MI.Test.Repositories.csproj", "{0D7A6CFE-7186-427D-811A-1D42E442603B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.Test.Repositories", "MI.Test.Repositories\MI.Test.Repositories.csproj", "{0D7A6CFE-7186-427D-811A-1D42E442603B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.EntityFrameworkCore", "MI.EntityFrameworkCore\MI.EntityFrameworkCore.csproj", "{A36CCF8F-F2F4-4B34-AA35-62C2CDB09AFB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.EntityFrameworkCore", "MI.EntityFrameworkCore\MI.EntityFrameworkCore.csproj", "{A36CCF8F-F2F4-4B34-AA35-62C2CDB09AFB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.EntityFramework.Common", "MI.EntityFramework.Common\MI.EntityFramework.Common.csproj", "{06F1B7B0-7A0F-43B4-B63F-307DA30855D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MI.EntityFramework.Common", "MI.EntityFramework.Common\MI.EntityFramework.Common.csproj", "{06F1B7B0-7A0F-43B4-B63F-307DA30855D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MI.Domain.Test", "MI.Domain.Test\MI.Domain.Test.csproj", "{A0C49205-7CD3-4DAA-84AF-CCE8F3D04AA0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -207,6 +209,10 @@ Global
 		{06F1B7B0-7A0F-43B4-B63F-307DA30855D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{06F1B7B0-7A0F-43B4-B63F-307DA30855D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06F1B7B0-7A0F-43B4-B63F-307DA30855D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0C49205-7CD3-4DAA-84AF-CCE8F3D04AA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0C49205-7CD3-4DAA-84AF-CCE8F3D04AA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0C49205-7CD3-4DAA-84AF-CCE8F3D04AA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0C49205-7CD3-4DAA-84AF-CCE8F3D04AA0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

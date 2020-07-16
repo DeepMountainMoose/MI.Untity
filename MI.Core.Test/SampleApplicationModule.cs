@@ -10,14 +10,12 @@ using System.Net;
 using System.Net.Http;
 using System.Reflection;
 using System.Threading;
-using MI.Library.Integration.Common.Extensions;
-using FeI.RedisCache.ProtoBuf.Caching.Redis;
-using MI.RedisCache.Caching.Redis;
 using MI.Library.Integration.Common;
+using MI.Test.Repositories;
 
 namespace MI.Core.Test
 {
-    [DependsOn(typeof(KernelModule),typeof(IntegrationCommonModule))]
+    [DependsOn(typeof(KernelModule), typeof(IntegrationCommonModule), typeof(RepositiesModule))]
     public class SampleApplicationModule : Modules.Module
     {
         /// <summary>

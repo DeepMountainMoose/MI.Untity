@@ -4,11 +4,14 @@ using System.Linq;
 using System.Threading.Tasks;
 using MI.Core.Runtime.Caching;
 using MI.Core.Test.Service;
+using MI.Domain.Test;
+using MI.Domain.Test.Interface.EntityFramework;
 using MI.EF.Core.Env;
 using MI.Library.Interface;
 using MI.Library.Interface.Common;
 using MI.Library.Interface.Enum;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ServiceClient;
 
@@ -22,16 +25,15 @@ namespace MI.Core.Test.Controllers
         private readonly ICacheManager _cacheManager;
         private readonly IResilientServiceClient _resilientServiceClient;
         private readonly IDbExecutorFactoryWithDbConfigType _dbExecutorFactory;
-        private readonly IEnvironmentHandler<MIContext> env;
-        private readonly IServiceProvider serviceProvider;
+        private readonly ITestCurrentContextProvider _contextProvider;
 
-        public ValuesController(ITestService testService, ICacheManager cacheManager, IResilientServiceClient resilientServiceClient, IDbExecutorFactoryWithDbConfigType dbExecutorFactory)
+        public ValuesController(ITestService testService, ICacheManager cacheManager, IResilientServiceClient resilientServiceClient, IDbExecutorFactoryWithDbConfigType dbExecutorFactory, ITestCurrentContextProvider contextProvider)
         {
             _testService = testService;
             _cacheManager = cacheManager;
             _resilientServiceClient = resilientServiceClient;
             _dbExecutorFactory = dbExecutorFactory;
-            this.env = serviceProvider.GetRequiredService<IEnvironmentHandler<MIContext>>();
+            _contextProvider = contextProvider;
         }
 
         // GET api/values
@@ -51,9 +53,11 @@ namespace MI.Core.Test.Controllers
             //int totalCount = (int)await dbExecutor.ExecuteScalarAsync(strCountSql, null);
             //return totalCount.ToString();
 
-            var result = await env.Db.SingleQueryAsync<SlideShowImg>(a => a.PKID == 3);
-
-            return result;
+            using (var context = _contextProvider.GetReadContext())
+            {
+                var result = await context.SlideShowImg.FirstOrDefaultAsync();
+                return result;
+            }
         }
 
         // GET api/values/5
